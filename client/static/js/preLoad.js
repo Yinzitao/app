@@ -3,8 +3,9 @@ function preLoad(back){
 	var preload=document.getElementById('preload');
 	var percent=document.getElementById('percent');
 	var barPercent=document.getElementById('bar_percent');
-	var arr=["img/image1.png","img/image2.png","img/image3.png","img/image4.png","img/image5.png","img/arrow.png"];
+	var arr=["static/img/image1.png","static/img/image2.png","static/img/image3.png","static/img/image4.png","static/img/image5.png","static/img/arrow.png"];
 	var nums=0;
+	console.log(arr)
 	for(var i=0;i<arr.length;i++){
 		var img=new Image();
 		img.onload=function(){
@@ -17,6 +18,9 @@ function preLoad(back){
 				$('.page1').css('display','block');
 				init();
 			}
+			// preload.style.display='none';
+			// 	$('.page1').css('display','block');
+			// 	init();
 		}
 		img.src=arr[i];
 	}

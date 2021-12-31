@@ -1,40 +1,27 @@
-// var http=require('http'); //用来启服务
-// var fs=require('fs'); //用来读取文件
-// var root="/Users/yintao/yzt/index.html" //你本地放index.html页面的文件路径
 
-// //开启服务
-// var server=http.createServer(function(req,res){
-//     var url=req.url;
-
-//     var file = root+url;
-//     // res.end(file);
-//     // fs.readFile(file,function(err,data){
-//     //     console.log(err)
-//     //     if(err){
-//     //         res.writeHeader(404,{
-//     //             'content-type' : 'text/html;charset="utf-8"'
-//     //         });
-//     //         res.write('<h1>404错误</h1><p>你要找的页面不存在</p>');
-//     //         res.end();
-//     //     }else{
-//     //         res.writeHeader(200,{
-//     //             'content-type' : 'text/html;charset="utf-8"'
-//     //         });
-//     //         res.write(data);//将index.html显示在客户端
-//     //         res.end('3333');
-
-//     //     }
-//     // })
-// }).listen(8080); //端口号
-// 
-// 
-// 
 var http = require('http');
 var fs = require('fs');
 var server = http.createServer(function (reg,res) {
-    res.writeHead(200,{"Content-type":"text/html"});
-    // res.end("Server is working");
-    var htmls = fs.createReadStream('index.html','utf8');
-    htmls.pipe(res)
+    if(reg.url.indexOf('/static/') !== - 1) {
+        readFile('../client/'+reg.url).then((data) => {
+            res.write(data, "binary");
+            res.end();
+        })
+    } else {
+        var htmls = fs.createReadStream('../client/index.html','utf8');
+        htmls.pipe(res)
+    }
 });
+
+function readFile (filePath) {
+    return new Promise((resolve, reject) => {
+        fs.readFile(filePath, "binary", (err, data) => {
+            if(err) {
+                reject(err);
+                return
+            }
+            resolve(data)
+        })
+    })
+}
 server.listen(8080,"localhost");
