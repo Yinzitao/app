@@ -3,7 +3,7 @@ function preLoad(back){
 	var preload=document.getElementById('preload');
 	var percent=document.getElementById('percent');
 	var barPercent=document.getElementById('bar_percent');
-	var arr=["static/img/image1.png","static/img/image2.png","static/img/image3.png","static/img/image4.png","static/img/image5.png","static/img/arrow.png"];
+	var arr=["static/img/image1.png","static/img/image2.png","static/img/image3.png","static/img/image4.png","static/img/image5.png","static/img/arrow.png","static/img/lbj.jpg","static/img/bj.jpg"];
 	var nums=0;
 	console.log(arr)
 	for(var i=0;i<arr.length;i++){
