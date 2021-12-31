@@ -285,6 +285,9 @@ html,body{height: 100%;overflow: hidden;}
 .page6 .point{
 	background-position: -722px -890px;
 }
+.page6 .text3{
+	background-image:url(../img/image1.png);/*变*/
+}
 
 /*页面7*/
 .page7{
@@ -333,6 +336,9 @@ html,body{height: 100%;overflow: hidden;}
 	background-position:-722px -878px;
 }
 .page8 .text3{
+	background-image:url(../img/image1.png);/*变*/
+}
+.page8 .text3{
 	width:362px;
 	height: 186px;
 	left:50%;
@@ -341,7 +347,7 @@ html,body{height: 100%;overflow: hidden;}
 }
 
 /*页面9*/
-.page9{background:#FC6F6F;}
+.page9{background:#FC6F6F;background-image:url(../img/lbj.jpg);background-size: 100% 100%;}
 .page9>div{background-image:url(../img/image5.png);}
 
 .page9 .text1,.page9 .text2,.page9 .text3{
@@ -364,8 +370,16 @@ html,body{height: 100%;overflow: hidden;}
 	height: 413px;
 	margin-left: -193px;
 	background-position:-5px -12px;
+	background-image:url(../img/lbj.jpg);background-size: 100% 100%;
 	-webkit-animation: page9_pic 1s linear alternate infinite;
 	animation: page9_pic 1s linear alternate infinite;
+}
+.page9 .text9{
+	background-image:url(../img/text.png);
+	background-size: 100% 100%;
+	width: 80%;
+	height: 50%;
+	opacity: 1;
 }
 @-webkit-keyframes page9_pic{
 	0%{top: 28%;}
@@ -404,8 +418,54 @@ html,body{height: 100%;overflow: hidden;}
 	-webkit-animation: handAnimate 1.2s linear alternate infinite;
 	animation: handAnimate 1.5s linear alternate infinite;
 }
+/*0*/
+.page0{background-image:url(../img/bj.jpg);background-size: 100% 100%;}
+/*.page0>div{background-image:url(../img/bj.jpg);}*/
+
+.page0 .text1,.page0 .text2,.page0 .text3{
+	opacity: 0;
+	-webkit-animation: none;
+	animation: none;
+}
+
+/*.page0 .text1{
+	top: 8%;
+	background-position: -14px -440px;
+	background-image:url(../img/image5.png);
+}
+.page0 .text2{
+	top: 16%;
+	background-position:-13px -595px;
+	background-image:url(../img/image5.png);
+}*/
+.page0 .text1{
+	width: 596px;
+	height: 79px;
+	left: 50%;
+	margin-left:-298px;
+	-webkit-animation:page1_text1 .8s 2s;
+	animation:page1_text1 .8s 2s;	
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	top: 8%;
+	background-position: -14px -440px;
+	background-image:url(../img/image5.png);
+}
+.page0 .text2{
+	width:541px;
+	height: 85px;
+	left:50%;
+	margin-left: -270px;
+	-webkit-animation: page1_text2 .8s 3.5s;	
+	animation: page1_text2 .8s 3.5s;	
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	top: 16%;
+	background-position:-13px -595px;
+	background-image:url(../img/image5.png);
+}
 @-webkit-keyframes handAnimate{
 	0%{bottom: 17.5%;}
-	100%{bottom: 27.3%;}
+	100%{bottom: 20.3%;}
 }
 

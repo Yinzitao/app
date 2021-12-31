@@ -15,7 +15,7 @@ function preLoad(back){
 			barPercent.style.width=percentNum;
 			if(nums==arr.length){
 				preload.style.display='none';
-				$('.page1').css('display','block');
+				$('.page0').css('display','block');
 				init();
 			}
 			// preload.style.display='none';

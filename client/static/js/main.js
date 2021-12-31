@@ -85,20 +85,30 @@ function init(){
 	
 
 	//点击音乐按钮
-	var aud=document.getElementById('audio');
-	var music=document.querySelector('.music');
-	var self = this
-	// setTimeout(function(){ $(self).toggleClass('music_mute'); aud.play();}, 1000);
-	// this.setInterval("clock()",1000);
+	window.onload=function(){ 
+		var aud=document.getElementById('audio');
 
-	music.addEventListener('touchstart',function(){
-		$(this).toggleClass('music_mute');
-		
-	    if(aud.paused){
-	        aud.play();
-	    }else{
-	       aud.pause();
-	    }
-	},false);
+		var music=document.querySelector('.music');
+		var self = this
+		// setTimeout(function(){ $(self).toggleClass('music_mute'); aud.play();}, 1000);
+		// this.setInterval("clock()",1000);
+
+		console.log(aud);
+
+		setTimeout(function(){
+			// music.click();
+			aud.play();
+		},1000)
+		music.addEventListener('touchstart',function(){
+
+			$(this).toggleClass('music_mute');
+			// console.log(aud.paused)
+		    if(aud.paused){
+		        aud.play();
+		    }else{
+		       aud.pause();
+		    }
+		},false);
+	}
 
 }

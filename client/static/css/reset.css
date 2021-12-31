@@ -31,6 +31,8 @@ q:before,q:after {
 	content: '';
 	clear: both;
 	display: block;
+
+    
 }
 abbr,acronym { 
     border: 0; 
