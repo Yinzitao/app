@@ -96,7 +96,7 @@ function init(){
 		console.log(aud);
 
 		setTimeout(function(){
-			// music.click();
+			music.click();
 			aud.play();
 		},1000)
 		music.addEventListener('touchstart',function(){
