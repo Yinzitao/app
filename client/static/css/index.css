@@ -380,6 +380,7 @@ html,body{height: 100%;overflow: hidden;}
 	width: 80%;
 	height: 50%;
 	opacity: 1;
+	margin-left:20px;
 }
 @-webkit-keyframes page9_pic{
 	0%{top: 28%;}
@@ -463,6 +464,21 @@ html,body{height: 100%;overflow: hidden;}
 	top: 16%;
 	background-position:-13px -595px;
 	background-image:url(../img/image5.png);
+}
+.page0 .pic{
+	opacity: 1;
+	width:386px;
+	height: 413px;
+	margin-left: -193px;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	line-height: 100px;
+	margin-top: 350px;
+	/*background-position:-5px -12px;*/
+	/*background-image:url(../img/lbj.jpg);background-size: 100% 100%;*/
+	-webkit-animation: page9_pic 1s linear alternate infinite;
+	animation: page9_pic 1s linear alternate infinite;
 }
 @-webkit-keyframes handAnimate{
 	0%{bottom: 17.5%;}
